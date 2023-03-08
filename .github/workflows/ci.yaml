@@ -20,9 +20,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Run Automated Test
-        run: |
-          npm install
-          npm run test
         env: 
           CI: true
           API_KEY_TMDB: ${{ secrets.API_KEY_TMBD }}
+        run: |
+          npm install
+          npm run test
